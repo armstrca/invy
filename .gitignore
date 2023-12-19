@@ -45,3 +45,8 @@ examples.txt
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+
+
+# TODO: ignore node_modules
+# these should not be committed to your repository
+node_modules

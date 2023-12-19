@@ -55,6 +55,8 @@
     </div>
   </div>
   <div>
+    <%# something like this would be more readable / DRY  %>
+    <%# if policy(@category).edit? %>
     <% if current_user.role == "admin" || current_user.role == "manager" %>
       <%= button_to "Edit #{@category.name}", edit_category_path(@category), method: :get %>
       <p></p>

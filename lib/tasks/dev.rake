@@ -4,15 +4,17 @@ namespace :dev do
   # Rails.env = "production"
   desc "Drops, creates, migrates, and adds sample data to database"
   task reset: [
-         :environment,
-         "db:schema:cache:clear",
-         "db:drop",
-         "db:create",
-         "db:migrate",
-         "dev:create_users",
-         "dev:sample_data_1",
-         "dev:sample_data_2",
-       ]
+        :environment,
+        "db:schema:cache:clear",
+        "db:drop",
+        "db:create",
+        "db:migrate",
+        "dev:create_users",
+        # NITPIK: indents off a bit
+        # what's the difference between 1 and 2? 
+        "dev:sample_data_1",
+        "dev:sample_data_2",
+      ]
 
   desc "Destroy all database data"
   task destroy_all: :environment do

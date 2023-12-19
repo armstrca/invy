@@ -18,6 +18,8 @@ class RegistrationsControllerPolicy < ApplicationPolicy
   end
 
   def update?
+    # huh?
+    # seems like this could be `user.admin? || user.manager?`
     user.admin? || (user.manager? && !record.admin? && !record.manager?)
   end
 

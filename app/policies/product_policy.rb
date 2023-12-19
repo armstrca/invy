@@ -32,6 +32,7 @@ class ProductPolicy < ApplicationPolicy
     !user.manager? || !user.staff?
   end
 
+  # are you using these permitted_attributes methods?
   def permitted_attributes_for_create
     if user.admin? || user.manager?
       # Define permitted attributes for create action
